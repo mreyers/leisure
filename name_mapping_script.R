@@ -148,4 +148,4 @@ all_relevant <- all_players %>%
   rename(nflfastR_id = id)
 
 saveRDS(all_relevant, "all_relevant.rds")
-
+write_csv(all_relevant, "all_relevant.csv")
