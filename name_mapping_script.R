@@ -73,7 +73,7 @@ rookies <- players_tibble %>%
 
 # Modify a bit for full name, position, jersey number join
 rookies_adj <- rookies %>%
-  select(player_name = full_name, position, primary_position, jersey_number = number, team,
+  select(player_name = full_name, position, years_exp, primary_position, jersey_number = number, team,
          contains("id"),
          contains("depth_chart")) %>%
   filter(!is.na(jersey_number), jersey_number > 0)
@@ -95,7 +95,7 @@ one_game_joined <- one_game %>%
   # Bind
 vets_tibble <- players_tibble %>%
   filter(years_exp > 0) %>%
-  select(player_name = full_name, position, primary_position, jersey_number = number, team,
+  select(player_name = full_name, position, years_exp, primary_position, jersey_number = number, team,
          contains("id"),
          contains("depth_chart"))
   

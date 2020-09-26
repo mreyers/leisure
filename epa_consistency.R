@@ -143,3 +143,4 @@ all_madden %>%
          !is.na(tot_fant_pts)) %>%
   ggplot(aes(x = overall_rating, y = tot_fant_pts, col = (depth_chart_order == 1)  )) +
   geom_point()
+
